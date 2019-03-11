@@ -1,6 +1,6 @@
-Authors:
-NetIDs: 
-Date: 
+Authors: Nadine Alnajdawi, Jacob Bowles, Jessica Sofka, Lena Voytek
+NetIDs: nadinealnajdawi, bowlesj, jsofka, dvoytek
+Date: 25 March 2019
 Project Name: Lab 5
 
 # Description
