@@ -24,17 +24,17 @@ You should be able to turn the entire system on and off by pressing a switch.
 3. There are no non-trivial SFR manipulations in the main function and are wrapped in functions that have meaningful names
 5. A state machine is used to implement the bulk of the functionality of the program
 
-## ADC
+## ADC -- Jessica Sofka
 1. A function exists to initialize the ADC
 2. Uses the A0 pin as an input
 
-## PWM
+## PWM -- Lena Voytek
 1. Uses 2 PWMS on timer 3 and timer 4.
 2. Has a changeDutyCycle function.
 
-## Timer
+## Timer -- Jacob Bowles
 1. Uses a timer (0 or 1) to debounce states
 
-## Switch
+## Switch -- Nadine Alnajdawi
 1. Uses a switch to turn motors on and off.
 2. Switch uses an ISR
