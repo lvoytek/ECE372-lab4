@@ -35,6 +35,6 @@ You should be able to turn the entire system on and off by pressing a switch.
 ## Timer -- Jacob Bowles
 1. Uses a timer (0 or 1) to debounce states
 
-## Switch -- Nadine Alnajdawi
+## Switch -- Nadine Najdawi
 1. Uses a switch to turn motors on and off.
 2. Switch uses an ISR
