@@ -10,5 +10,4 @@ void initSwitch();
 void switchOn();
 void switchOff();
 
-
 #endif
