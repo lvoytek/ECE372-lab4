@@ -6,6 +6,9 @@
 #ifndef PWM_H
 #define PWM_H
 
+
+void initPWM();
+
 void changeDutyCycle(int dutycycle);
 
 
