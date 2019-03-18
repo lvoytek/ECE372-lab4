@@ -12,8 +12,8 @@ void initTimer0()
     TCCR0A &= ~(1 << WGM00); // Set timer to be in CTC mode
     TCCR0A |= (1 << WGM01);
     TCCR0B &= ~(1 << WGM02);
-    TCCR0B |= (1 << CS02) | (1 << CS00); // Sets the prescaler to 1024
-    OCR0A = 1560;
+    TCCR0B |= (1 << CS01) | (1 << CS00); // Sets the prescaler to 1024
+    OCR0A = 250;
 }
 
 /* This delays the program an amount specified by unsigned int delay.
