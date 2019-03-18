@@ -6,17 +6,17 @@
 
 void initPWM()
 {
-    DDRB |= (1 << DDB5); /* pin 11 on the dev board */
+    DDRE |= (1 << DDE3); /* pin 5 on the dev board */
 
     // set Fast PWM 10-bit mode, non-inverting
-    TCCR1A |= (1 << COM1A1)|(1 << WGM11)|(1 << WGM10);
-    TCCR1B |= (1 << WGM12)|(1 << CS10);
+    TCCR3A |= (1 << COM3A1)|(1 << WGM31)|(1 << WGM30);
+    TCCR3B |= (1 << WGM32)|(1 << CS30);
 
-    // set the duty cycle 25%
-    OCR1A = 255;
+    // set the duty cycle 100%
+    OCR3A = 255;
 }
 
 void changeDutyCycle(int dutycycle)
 {
-    
+    OCR3A = (int) (1023/100.0 * dutycycle);
 }

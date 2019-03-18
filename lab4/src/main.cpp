@@ -7,13 +7,23 @@
 // program. It should never contain assignments to special function registers
 // for the exception key one-line code such as checking the state of the pin.
 //
-
+#include "PWM.h"
+#include "timer.h"
 
 int main()
 {
+    initPWM();
+    initTimer0();
+
+    int duty = 100;
     while(1)
     {
+      changeDutyCycle(duty);
+      delayMs(10);
+      duty--;
 
+      if(duty == 0)
+        duty = 100;
     }
 
   return 0;
