@@ -7,7 +7,8 @@
 #define SWITCH_H
 
 void initSwitch();
-void switchOn();
-void switchOff();
+void initSwitchPB3();
+//void switchOn();
+//void switchOff();
 
 #endif
