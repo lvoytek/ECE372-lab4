@@ -6,10 +6,10 @@
 //----------------------------------------------------------------------//
 #include <Arduino.h>
 #include <avr/io.h>
-#include "adc.h"
+#include "ADC.h"
 #include "switch.h"
 #include "timer.h"
-#include "pwm.h"
+#include "PWM.h"
 
 /*
  * Define a set of states that can be used in the state machine using an enum.

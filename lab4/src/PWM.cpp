@@ -13,10 +13,10 @@ void initPWM()
     TCCR3B |= (1 << WGM32)|(1 << CS30);
 
     // set the duty cycle 100%
-    OCR3A = 255;
+    OCR3A = 1023;
 }
 
 void changeDutyCycle(int dutycycle)
 {
     OCR3A = (int) (1023/100.0 * dutycycle);
-}
+}   
