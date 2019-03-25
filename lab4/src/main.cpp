@@ -3,12 +3,12 @@
 // Date: 25 March 2019      
 // Assignment: Lab 4
 
-#include <Arduino.h>
 #include <avr/io.h>
 #include "ADC.h"
 #include "switch.h"
 #include "timer.h"
 #include "PWM.h"
+#include <Arduino.h> //sei()
 
 /*
 * Define a set of states that can be used in the state machine using an enum.
@@ -37,6 +37,9 @@ int main()
         switch(state)
         {
             case wait_press:
+                low = ADCL;
+                low += ((ADCH & 0x3) << 8);
+                changeDutyCycle((int) low/1023.0 * 100.0);
                 break;
 
             case debounce_press:
@@ -45,6 +48,9 @@ int main()
                 break;
             
             case wait_release:
+                low = 0;
+                OCR3A = 0;
+                OCR4A = 0;
                 break;
             
             case debounce_release:
@@ -54,13 +60,6 @@ int main()
            
             default:
                 break;
-        }
-
-        if(button)
-        {
-            low = ADCL;
-            low += (unsigned int) (ADCH << 8);
-            changeDutyCycle(low);
         }
     }
 

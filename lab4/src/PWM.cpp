@@ -15,9 +15,21 @@ void initPWM()
 
     // set the duty cycle 100%
     OCR3A = 1023;
+
+
+    DDRH |= (1 << DDH3); /* pin 6 on the dev board */
+
+    // set Fast PWM 10-bit mode, non-inverting
+    TCCR4A |= (1 << COM4A1)|(1 << WGM41)|(1 << WGM40);
+    TCCR4B |= (1 << WGM42)|(1 << CS40);
+
+    // set the duty cycle 0%
+    OCR4A = 0;
 }
 
 void changeDutyCycle(int dutycycle)
 {
     OCR3A = (int) (1023/100.0 * dutycycle);
+
+    OCR4A = 1023 - (int) (1023/100.0 * dutycycle);
 }   
