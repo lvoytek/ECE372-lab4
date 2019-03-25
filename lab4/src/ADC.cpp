@@ -32,9 +32,3 @@ void initADC()
   // start the first conversion
   ADCSRA |= (1 << ADSC);
 }
-
-
-int getADCVoltage()
-{
-    return 0;
-}

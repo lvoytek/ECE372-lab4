@@ -9,6 +9,5 @@
 #include <avr/io.h>
 
 void initADC();
-int getADCVoltage();
 
 #endif
