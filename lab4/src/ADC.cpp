@@ -26,7 +26,7 @@ void initADC()
   // ADC clock frequency is 16 Mhz divided by pre-scaler = 125KHz
   ADCSRA |= (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
 
-  // disable ADC0 pin digital input - pin A0 on board
+  // disable ADC0 pin digital input - pin A0 (22) on board
   DIDR0 |= (1 << ADC7D);
 
   // start the first conversion
