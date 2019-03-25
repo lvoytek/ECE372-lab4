@@ -18,7 +18,7 @@ void initSwitch(){
 
 void initSwitchPB3(){
   DDRB &= ~(1 << DDB3);
-  PORTB |= (1 << PORTB3); // enable pull-up for PORTB5
+  PORTB |= (1 << PORTB3); // enable pull-up for PORTB3
 
   PCICR |= (1 << PCIE0);
   // enable interrupts on PB3
